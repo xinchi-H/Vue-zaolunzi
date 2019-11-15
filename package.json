@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/xinchi-H/Vue-zaolunzi/issues"
   },
-  "homepage": "https://github.com/xinchi-H/Vue-zaolunzi#readme"
+  "homepage": "https://github.com/xinchi-H/Vue-zaolunzi#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
