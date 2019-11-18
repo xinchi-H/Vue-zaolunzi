@@ -53,10 +53,24 @@ const expect = chai.expect;
     const button = new Constructor({
         propsData: {
             icon: 'settings',
+        }
+    });
+    button.$mount(div); //不挂载到页面，就不会渲染这个svg，就没有css
+    let svg = button.$el.querySelector('svg');
+    let order = window.getComputedStyle(svg).order;
+    expect(order).to.eq('1')
+}
+{
+    const div = document.createElement('div');
+    document.body.appendChild(div);
+    const Constructor = Vue.extend(Button);
+    const button = new Constructor({
+        propsData: {
+            icon: 'settings',
             iconPosition: 'right',
         }
     });
-    button.$mount(div);
+    button.$mount(div); //不挂载到页面，就不会渲染这个svg，就没有css
     let svg = button.$el.querySelector('svg');
     let order = window.getComputedStyle(svg).order;
     expect(order).to.eq('2')
