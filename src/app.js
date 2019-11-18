@@ -31,7 +31,9 @@ const expect = chai.expect;
     button.$mount();
     let useElement = button.$el.querySelector('use');
     let href = useElement.getAttribute('xlink:href');
-    expect(href).to.eq('#i-settings')
+    expect(href).to.eq('#i-settings');
+    button.$el.remove();
+    button.$destroy();
 }
 {
     const Constructor = Vue.extend(Button);
@@ -44,7 +46,9 @@ const expect = chai.expect;
     button.$mount();
     let useElement = button.$el.querySelector('use');
     let href = useElement.getAttribute('xlink:href');
-    expect(href).to.eq('#i-loading')
+    expect(href).to.eq('#i-loading');
+    button.$el.remove();
+    button.$destroy();
 }
 {
     const div = document.createElement('div');
@@ -58,7 +62,9 @@ const expect = chai.expect;
     button.$mount(div); //不挂载到页面，就不会渲染这个svg，就没有css
     let svg = button.$el.querySelector('svg');
     let order = window.getComputedStyle(svg).order;
-    expect(order).to.eq('1')
+    expect(order).to.eq('1');
+    button.$el.remove();
+    button.$destroy();
 }
 {
     const div = document.createElement('div');
@@ -73,5 +79,7 @@ const expect = chai.expect;
     button.$mount(div); //不挂载到页面，就不会渲染这个svg，就没有css
     let svg = button.$el.querySelector('svg');
     let order = window.getComputedStyle(svg).order;
-    expect(order).to.eq('2')
+    expect(order).to.eq('2');
+    button.$el.remove();
+    button.$destroy();
 }
