@@ -24,7 +24,7 @@ import spies from 'chai-spies'
 chai.use(spies);
 
 const expect = chai.expect;
-{
+{// 作用域隔离
     // 测试按钮含有icon
     const Constructor = Vue.extend(Button);
     const vm = new Constructor({
@@ -35,7 +35,7 @@ const expect = chai.expect;
     vm.$mount();
     let useElement = vm.$el.querySelector('use');
     let href = useElement.getAttribute('xlink:href');
-    expect(href).to.eq('#i-settings');
+    expect(href).to.eq('#i-settings');// 断言
     vm.$el.remove();
     vm.$destroy();
 }
