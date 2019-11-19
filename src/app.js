@@ -20,10 +20,12 @@ new Vue({
 //单元测试
 import chai from 'chai'
 import spies from 'chai-spies'
+
 chai.use(spies);
 
 const expect = chai.expect;
 {
+    // 测试按钮含有icon
     const Constructor = Vue.extend(Button);
     const vm = new Constructor({
         propsData: {
@@ -93,8 +95,9 @@ const expect = chai.expect;
         }
     });
     vm.$mount();
-    let spy = chai.spy(function () {});
-    vm.$on('click',spy);
+    let spy = chai.spy(function () {
+    });
+    vm.$on('click', spy);
     //希望这个函数被执行
     let button = vm.$el;
     button.click();
