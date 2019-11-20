@@ -24,7 +24,6 @@ describe('Input', () => {
             }).$mount()
             const inputElement = vm.$el.querySelector('input')
             expect(inputElement.value).to.equal('1234')
-            vm.$destroy()
         })
         it('接收 disabled', () => {
             vm = new Constructor({
@@ -34,7 +33,6 @@ describe('Input', () => {
             }).$mount()
             const inputElement = vm.$el.querySelector('input')
             expect(inputElement.disabled).to.equal(true)
-            vm.$destroy()
         })
         it('接收 readonly', () => {
             vm = new Constructor({
@@ -44,7 +42,6 @@ describe('Input', () => {
             }).$mount()
             const inputElement = vm.$el.querySelector('input')
             expect(inputElement.readOnly).to.equal(true)
-            vm.$destroy()
         })
         it('接收 error', () => {
             vm = new Constructor({
@@ -56,7 +53,6 @@ describe('Input', () => {
             expect(useElement.getAttribute('xlink:href')).to.equal('#i-error')
             const errorMessage = vm.$el.querySelector('.errorMessage')
             expect(errorMessage.innerText).to.equal('你错了')
-            vm.$destroy()
         })
     })
     describe('事件', () => {
