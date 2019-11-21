@@ -72,7 +72,6 @@ describe('Input', () => {
                 inputElement.dispatchEvent(event)
                 expect(callback).to.have.been.calledWith(event)
             })
-
         });
         // it('支持 input 事件', () => {
         //     vm = new Constructor({}).$mount()
