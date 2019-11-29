@@ -35,14 +35,14 @@
         },
         computed: {
             colClass() {
-                let {span, offset, ipad, narrowPc, pc, widePc} = this;
+                let {span, offset,ipad,narrowPc,pc,widePc} = this;
                 return [
-                    span && `col -${span}`,
-                    offset && `offset -${offset}`,
-                    ...(ipad ? [`col - ipad -${ipad.span}`]:[]),
-                    ...(narrowPc ? [`col - narrow - pc -${narrowPc.span}`]:[]),
-                    ...(pc ? [`col - pc -${pc.span}`]:[]),
-                    ...(widePc ? [`col - wide - pc -${widePc.span}`]:[]),
+                    span && `col-${span}`,
+                    offset && `offset-${offset}`,
+                    ...(ipad ? [`col-ipad-${ipad.span}`]:[]),
+                    ...(narrowPc ? [`col-narrow-pc-${narrowPc.span}`]:[]),
+                    ...(pc ? [`col-pc-${pc.span}`]:[]),
+                    ...(widePc ? [`col-wide-pc-${widePc.span}`]:[]),
                 ]
             },
             colStyle() {
