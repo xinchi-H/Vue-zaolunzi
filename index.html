@@ -29,7 +29,7 @@
         }
 
         #app {
-            margin: 20px;
+            margin: 20px 0;
         }
 
         body {
@@ -43,8 +43,26 @@
     </style>
 </head>
 <body>
+<style>
+    .demo {
+        background: #ddd;
+        border: 1px solid #666;
+        min-height: 100px;
+    }
+</style>
 <div id="app">
-    <div style="border: 1px solid black;">
+    <div style="margin: 40px 0;">
+        <g-layout style="height: 100vh;">
+            <g-sider class="demo">sider</g-sider>
+            <g-layout>
+                <g-header class="demo">header</g-header>
+                <g-content class="demo">content</g-content>
+                <g-footer class="demo">footer</g-footer>
+            </g-layout>
+        </g-layout>
+    </div>
+    <hr>
+    <div style="border: 1px solid black;margin: 40px;">
         <g-row gutter="20">
             <g-col span="24"
                    :ipad="{span:8}"
