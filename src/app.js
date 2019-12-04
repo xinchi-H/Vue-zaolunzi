@@ -40,9 +40,9 @@ new Vue({
             console.log(info);
         },
         showToast() {
-            this.$toast('<strong>我是</strong> message',
+            this.$toast(`我是第${parseInt(Math.random()*100)}个<p>message</p>`,
                 {
-                    position:'bottom',
+                    position:'middle',
                     closeButton: {
                         text: '知道了',
                         callback() {
