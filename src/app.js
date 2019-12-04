@@ -35,15 +35,19 @@ new Vue({
         loading3: false,
         message: '王',
     },
-    created() {
-
-    },
     methods: {
         inputChange(info) {
             console.log(info);
         },
         showToast() {
-            this.$toast('我是 message')
+            this.$toast('我是 message', {
+                closeButton: {
+                    text: '知道了',
+                    callback() {
+                        console.log('我知道了');
+                    }
+                }
+            })
         }
     }
 });
