@@ -40,15 +40,19 @@ new Vue({
             console.log(info);
         },
         showToast() {
-            this.$toast('<strong>我是</strong> message', {
-                closeButton: {
-                    text: '知道了',
-                    callback() {
-                        console.log('我知道了');
-                    }
-                },
-                enableHTML: true,
-            })
+            this.$toast('<strong>我是</strong> message',
+                {
+                    position:'bottom',
+                    closeButton: {
+                        text: '知道了',
+                        callback() {
+                            console.log('我知道了');
+                        }
+                    },
+                    enableHTML: true,
+                    autoCloseDelay: 50
+                }
+            )
         }
     }
 });
