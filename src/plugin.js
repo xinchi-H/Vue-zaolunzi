@@ -5,10 +5,10 @@ export default {
         Vue.prototype.$toast = function (message) {
             let Constructor = Vue.extend(Toast);
             let toast = new Constructor({
-                propsData:{
+                propsData: {
                     closeButton: {
                         text: '知道了',
-                        callback(){
+                        callback() {
                             console.log('我知道了');
                         }
                     }

@@ -36,14 +36,14 @@ new Vue({
         message: '王',
     },
     created() {
-        this.$toast('我是 message')
+
     },
     methods: {
         inputChange(info) {
             console.log(info);
         },
         showToast() {
-
+            this.$toast('我是 message')
         }
     }
 });
