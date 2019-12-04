@@ -71,6 +71,7 @@
             },
             close() {
                 this.$el.remove();
+                this.$emit('close');
                 this.$destroy()
             },
             onClickClose() {
@@ -87,7 +88,12 @@
     $font-size: 14px;
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
+    @keyframes fade-in {
+        0% {opacity: 0; transform: translateY(100%)}
+        100% { opacity: 1;transform: translateY(0%)}
+    }
     .toast {
+        animation: fade-in 1s;
         color: white;
         position: fixed;
         left: 50%;
@@ -112,17 +118,17 @@
             border-left: 1px solid #666;
             margin-left: 16px;
         }
-        &.position-top{
+        &.position-top {
             top: 0;
             transform: translateX(-50%);
         }
-        &.position-bottom{
+        &.position-bottom {
             bottom: 0;
             transform: translateX(-50%);
         }
-        &.position-middle{
+        &.position-middle {
             top: 50%;
-           transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
     }
 </style>
