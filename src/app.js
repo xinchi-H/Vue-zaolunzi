@@ -50,7 +50,7 @@ new Vue({
                         }
                     },
                     enableHTML: true,
-                    autoCloseDelay: 50,
+                    autoClose: 50,
                 }
             )
         }
