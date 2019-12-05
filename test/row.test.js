@@ -10,17 +10,17 @@ describe('Row', () => {
     it('存在.', () => {
         expect(Row).to.be.ok
     });
-    it('接收 gutter 属性', () => {
+    it('接收 gutter 属性', (done) => {
         Vue.component('g-row', Row);
         Vue.component('g-col', Col);
         const div = document.createElement('div');
         document.body.appendChild(div);
-        div.innerText = `
+        div.innerHTML = `
         <g-row gutter='20'>
-          <c-col span="12"></g-col>
-          <c-col span="12"></g-col>
+          <g-col span="12"></g-col>
+          <g-col span="12"></g-col>
         </g-row>
-        `
+        `;
         const vm = new Vue({
             el: div
         });
