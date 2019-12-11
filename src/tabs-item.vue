@@ -33,6 +33,7 @@
 
 <style>
     .tabs-item {
-
+        flex-shrink: 0;
+        padding: 0 2em;
     }
 </style>
