@@ -10,6 +10,7 @@
 <script>
     export default {
         name: 'lunzi-tabs-head',
+        inject: ['eventBus'],
     }
 </script>
 
@@ -19,7 +20,7 @@
         display: flex;
         height: $tab-height;
         justify-content: flex-start;
-        align-items: center;
+
         border: 1px solid red;
         .actions-wrapper {
             margin-left: auto;

@@ -7,6 +7,7 @@
 <script>
     export default {
         name: 'lunzi-tabs-body',
+        inject: ['eventBus'],
     }
 </script>
 
