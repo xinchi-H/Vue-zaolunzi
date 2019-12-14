@@ -23,12 +23,12 @@
                 required: true,
             },
         },
-        computed:{
-          classes(){
-              return {
-                  active : this.active,
-              }
-          }
+        computed: {
+            classes() {
+                return {
+                    active: this.active,
+                }
+            }
         },
         created() {
             this.eventBus.$on('update:selected', (name) => {
@@ -42,7 +42,7 @@
         },
         methods: {
             xxx() {
-                this.eventBus.$emit('update:selected', this.name,this)
+                this.eventBus.$emit('update:selected', this.name, this)
             }
         }
     }
@@ -57,7 +57,7 @@
         align-items: center;
         flex-shrink: 0;
         padding: 0 2em;
-        &.active{
+        &.active {
             font-weight: bold;
             color: $blue;
         }
