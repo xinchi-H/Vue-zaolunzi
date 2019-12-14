@@ -33,17 +33,23 @@
         created() {
             this.eventBus.$on('update:selected', (name) => {
                 this.active = name === this.name
+                // if(name===this.name){
+                //     this.active=true
+                // }else{
+                //     this.active=false
+                // }
             })
         },
         methods: {
             xxx() {
-                this.eventBus.$emit('update:selected', this.name)
+                this.eventBus.$emit('update:selected', this.name,this)
             }
         }
     }
 </script>
 
 <style scoped lang="scss">
+    $blue: blue;
     .tabs-item {
         cursor: pointer;
         height: 100%;
@@ -52,7 +58,8 @@
         flex-shrink: 0;
         padding: 0 2em;
         &.active{
-            background: red;
+            font-weight: bold;
+            color: $blue;
         }
     }
 </style>

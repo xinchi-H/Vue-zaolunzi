@@ -68,6 +68,7 @@
 <div id="app">
     <div style="margin: 0 0 40px 0;">
         <g-tabs :selected.sync="selectedTab">
+            <!--selected="selectedTab" @update:selected="selectedTab = $event"-->
             <g-tabs-head>
                 <template slot="actions">
                     <button>settings</button>
