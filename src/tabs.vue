@@ -35,9 +35,9 @@
         mounted() {
             this.$children.forEach((vm) => {
                 if (vm.$options.name === 'lunzi-tabs-head') {
-                    vm.$children.forEach((item) => {
-                        if (item.$options.name === 'lunzi-tabs-item' && item.name === this.selected) {
-                            this.eventBus.$emit('update:selected', this.selected, item)
+                    vm.$children.forEach((childVm) => {
+                        if (childVm.$options.name === 'lunzi-tabs-item' && childVm.name === this.selected) {
+                            this.eventBus.$emit('update:selected', this.selected, childVm)
                         }
                     })
                 }
