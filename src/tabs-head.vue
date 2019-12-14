@@ -34,7 +34,7 @@
             position: absolute;
             bottom: 0;
             border-bottom: 1px solid $blue;
-            transition: all 350ms;
+            transition: all 360ms;
         }
         .actions-wrapper {
             margin-left: auto;
