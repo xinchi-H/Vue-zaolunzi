@@ -18,13 +18,13 @@
         methods: {
             xxx() {
                 this.visible = !this.visible;
-                if(visible===true){
-                    this.$nextTick(()=>{
-                        let eventHandle = ()=>{
-                            this.visible=false;
-                            document.removeEventListener('click',eventHandle)
+                if (this.visible === true) {
+                    this.$nextTick(() => {
+                        let eventHandle = () => {
+                            this.visible = false;
+                            document.removeEventListener('click', eventHandle)
                         };
-                        document.addEventListener('click',eventHandle)
+                        document.addEventListener('click', eventHandle)
                     })
                 }
             }
