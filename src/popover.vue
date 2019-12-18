@@ -47,7 +47,6 @@
                     (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
                     return
                 }
-                console.log('d');
                 this.close();
             },
         }
@@ -62,7 +61,6 @@
     }
     .content-wrapper {
         position: absolute;
-        border: 1px solid red;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
         transform: translateY(-100%);
     }
