@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/xinchi-H/Vue-zaolunzi#readme",
   "dependencies": {
-    "vue": "^2.6.10",
+    "vue": "^2.5.16",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
