@@ -24,15 +24,35 @@ describe('Popover', () => {
         const vm = new Vue({
             el: div
         });
-            vm.$el.querySelector('button').click();
-            vm.$nextTick(() => {
-                const {contentWrapper} = vm.$refs.a.$refs;
-                expect(contentWrapper.classList.contains('position-bottom')).to.be.true;
-                done()
-            })
-        // const useElement = vm.$el.querySelector('use');
-        // expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings');
-        // vm.$destroy()
-    })
-
+        vm.$el.querySelector('button').click();
+        vm.$nextTick(() => {
+            const {contentWrapper} = vm.$refs.a.$refs;
+            expect(contentWrapper.classList.contains('position-bottom')).to.be.true;
+            done()
+        });
+        vm.$destroy()
+    });
+    xit('可以设置trigger.', () => {
+        Vue.component('g-popover', Popover);
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        div.innerHTML = `
+         <g-popover position="bottom" ref="a">
+            <template slot="content">
+               弹出内容
+            </template>
+            <button>点我</button>
+        </g-popover>
+        `;
+        const vm = new Vue({
+            el: div
+        });
+        let event = new Event('mouseenter');
+        vm.$el.dispatchEvent(event);
+        vm.$nextTick(() => {
+            const {contentWrapper} = vm.$refs.a.$refs;
+            expect(contentWrapper).to.exist;
+            done()
+        });
+    });
 });
