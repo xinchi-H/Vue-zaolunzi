@@ -52,6 +52,7 @@ new Vue({
         loading3: false,
         message: '王',
         selectedTab: 'cars',
+        selectedCollapse: ['2'],
     },
     methods: {
         inputChange(info) {
