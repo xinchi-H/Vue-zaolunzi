@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/Vue-zaolunzi/',
     title: 'lunzi UI',
     description: '一个好用的 UI',
     themeConfig: {
