@@ -24,13 +24,15 @@ describe('Popover', () => {
         const vm = new Vue({
             el: div
         });
-        vm.$el.querySelector('button').click();
         vm.$nextTick(() => {
-            const {contentWrapper} = vm.$refs.a.$refs;
-            expect(contentWrapper.classList.contains('position-bottom')).to.be.true;
-            done()
+            vm.$el.querySelector('button').click();
+            vm.$nextTick(() => {
+                const {contentWrapper} = vm.$refs.a.$refs;
+                expect(contentWrapper.classList.contains('position-bottom')).to.be.true;
+                done()
+            })
         });
-        vm.$destroy()
+
     });
     xit('可以设置trigger.', () => {
         Vue.component('g-popover', Popover);
@@ -55,4 +57,5 @@ describe('Popover', () => {
             done()
         });
     });
-});
+})
+;
