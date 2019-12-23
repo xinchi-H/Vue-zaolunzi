@@ -14,7 +14,7 @@
   
 2.安装 zaolunzi
   ```
-  npm i --save zaolunzi201911
+  npm i --save zaolunzi20191223
   ```
 
 3.引入 zaolunzi
