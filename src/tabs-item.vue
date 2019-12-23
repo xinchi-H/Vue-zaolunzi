@@ -14,7 +14,7 @@
             }
         },
         props: {
-            disabled: {
+            disabled: {      
                 type: Boolean,
                 default: false,
             },

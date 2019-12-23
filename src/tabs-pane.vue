@@ -16,7 +16,7 @@
         props:{
             name: {
                 type: [String, Number],
-                required: true,
+                required: true,          
             },
         },
         computed:{
