@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Input from "../../../src/Input";
+import Input from "../../../src/input";
 
 export default {
   components: {

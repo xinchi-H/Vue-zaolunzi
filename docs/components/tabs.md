@@ -34,3 +34,19 @@ data() {
     }
 }
 ```
+
+# Tabs Attributes
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| ------ | ------ | ------ | ------ | ------ |
+|selected|默认选中值|String|tabs-item的name|——|
+
+# Tabs-Item Attributes
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| ------ | ------ | ------ | ------ | ------ |
+|name|名字|String/Number|       |——|
+|disabled|是否禁用|Boolean|    |false|
+
+# Tabs-Pane Attributes
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| ------ | ------ | ------ | ------ | ------ |
+|name|名字|String/Number|       |——|

@@ -18,7 +18,7 @@ title: Input
 # 进阶用法
 <br />
 <ClientOnly>
-  <input-demos-2></input-demos-2>
+  <input-demos2></input-demos2>
 </ClientOnly>
 
 ```html
