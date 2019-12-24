@@ -47,7 +47,7 @@ data() {
 # Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
-|value|绑定值|String/Date|    |——|
+|value|绑定值|String/ Date|    |——|
 |disabled|是否禁用|Boolean|   |false|
 |readonly|是否只读|Boolean|   |false|
 |error|显示错误文本|String|   |——|

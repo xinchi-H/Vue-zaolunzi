@@ -43,7 +43,7 @@ data() {
 # Tabs-Item Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
-|name|名字|String/Number|       |——|
+|name|名字|String/ Number|       |——|
 |disabled|是否禁用|Boolean|    |false|
 
 # Tabs-Pane Attributes

@@ -19,7 +19,7 @@ Toast 组件是以插件的方式引入,它将在 Vue.prototype上添加全局�
 ```JS
 methods: {
     showToast() {
-        this.$toast(`我是第${parseInt(Math.random() * 100)}个<p>message</p>`,
+        this.$toast('我是Toast',
             {
                 position: 'top',
                 closeButton: {
@@ -28,7 +28,7 @@ methods: {
                         console.log('我知道了');
                     }
                 },
-                enableHTML: true,
+                enableHTML: false,
                 autoClose: 50,
             }
         )
@@ -39,7 +39,7 @@ methods: {
 # Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
-|icon|图标类型|String|settings/up/down/left/right/download/thumbs-up|——|
-|icon-position|图标位置|String|left / right|left|
-|loading|是否加载中|Boolean|   |false|
-|disabled|是否禁用|Boolean|   |false|
+|position|弹出位置|String|top/ bottom/ middle|top|
+|closeButton|关闭选项（可携带callback）|Object|   |——|
+|enableHTML|是否支持HTML|Boolean||false|
+|autoClose|是否自动关闭|Boolean/ Number|   |5|

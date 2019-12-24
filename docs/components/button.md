@@ -19,7 +19,7 @@ title: Button
 # Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
-|icon|图标类型|String|settings/up/down/left/right/download/thumbs-up|——|
-|icon-position|图标位置|String|left / right|left|
+|icon|图标类型|String|settings/ up/ down/ left/ right/ download/ thumbs-up|——|
+|icon-position|图标位置|String|left/ right|left|
 |loading|是否加载中|Boolean|   |false|
 |disabled|是否禁用|Boolean|   |false|

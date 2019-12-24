@@ -130,7 +130,7 @@
         }
     }
     .toast {
-        font-family: serif;
+        font-family: fantasy;
         color: white;
         font-size: $font-size;
         line-height: 1.8;

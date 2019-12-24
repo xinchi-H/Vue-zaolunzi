@@ -27,7 +27,7 @@
                                 console.log('我知道了');
                             }
                         },
-                        enableHTML: true,
+                        enableHTML: false,
                         autoClose: 50,
                     }
                 )

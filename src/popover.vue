@@ -120,6 +120,7 @@
         position: relative;
     }
     .content-wrapper {
+        z-index: 30;
         position: absolute;
         border: 1px solid $border-color;
         border-radius: $border-radius;
