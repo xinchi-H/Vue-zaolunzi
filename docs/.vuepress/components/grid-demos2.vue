@@ -4,32 +4,18 @@
             <g-col span="12">
                 <div class="demoCol">12</div>
             </g-col>
-            <g-col span="12">
-                <div class="demoCol">12</div>
-            </g-col>
-        </g-row>
-        <g-row gutter="10" class="demoRow">
-            <g-col span="8">
-                <div class="demoCol">8</div>
-            </g-col>
-            <g-col span="8">
-                <div class="demoCol">8</div>
-            </g-col>
-            <g-col span="8">
-                <div class="demoCol">8</div>
+            <g-col span="10" offset="2">
+                <div class="demoCol">10</div>
             </g-col>
         </g-row>
         <g-row gutter="10" class="demoRow">
             <g-col span="6">
                 <div class="demoCol">6</div>
             </g-col>
-            <g-col span="6">
+            <g-col span="6" offset="1">
                 <div class="demoCol">6</div>
             </g-col>
-            <g-col span="6">
-                <div class="demoCol">6</div>
-            </g-col>
-            <g-col span="6">
+            <g-col span="6" offset="5">
                 <div class="demoCol">6</div>
             </g-col>
         </g-row>

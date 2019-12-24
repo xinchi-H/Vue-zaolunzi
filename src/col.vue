@@ -1,8 +1,9 @@
 <template>
-    <div class="col" :class="colClass" :style="colStyle" style="border: 1px solid skyblue;">
+    <div class="col" :class="colClass" :style="colStyle">
         <slot></slot>
     </div>
 </template>
+
 <script>
     let validator = (value) => {
         let keys = Object.keys(value);
@@ -17,12 +18,8 @@
     export default {
         name: 'lunzi-col',
         props: {
-            span: {
-                type: [Number, String]
-            },
-            offset: {
-                type: [Number, String]
-            },
+            span: {type: [Number, String]},
+            offset: {type: [Number, String]},
             ipad: {type: Object, validator,},
             narrowPc: {type: Object, validator,},
             pc: {type: Object, validator,},
@@ -68,8 +65,8 @@
             },
             colStyle() {
                 return {
-                    paddingLeft: this.gutter / 2 + 'px',
-                    paddingRight: this.gutter / 2 + 'px',
+                    paddingLeft: this.gutter / 2 + `px`,
+                    paddingRight: this.gutter / 2 + `px`,
                 }
             }
         }
@@ -77,7 +74,7 @@
 </script>
 <style scoped lang="scss">
     .col {
-        width: 50%;
+        box-sizing: border-box;
         $class: col-;
         @for $n from 1 through 24 {
             &.#{$class}#{$n} {
