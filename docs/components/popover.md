@@ -3,12 +3,13 @@ title: Popover - 弹出框
 ---
 # 弹出层
 
-# 使用方法
-
+# 基础用法
 <br />
 <ClientOnly>
   <popover-demos></popover-demos>
 </ClientOnly>
+
+注：第一个popover添加了关闭按钮
 
 ```html
 <g-popover position="bottom">
@@ -38,14 +39,41 @@ title: Popover - 弹出框
 </g-popover>
 ```
 
-```JS
+# Hover 触发
+<br />
+<ClientOnly>
+  <popover-demos2></popover-demos2>
+</ClientOnly>
 
+```HTML
+<g-popover position="bottom" trigger="hover">
+    <template slot="content">
+        <div>popover内容</div>
+    </template>
+    <g-button>上方弹出</g-button>
+</g-popover>
+<g-popover position="top" trigger="hover">
+    <template slot="content">
+        <div>popover内容</div>
+    </template>
+    <g-button>上方弹出</g-button>
+</g-popover>
+<g-popover position="left" trigger="hover">
+    <template slot="content">
+        <div>popover内容</div>
+    </template>
+    <g-button>左边弹出</g-button>
+</g-popover>
+<g-popover position="right" trigger="hover">
+    <template slot="content">
+        <div>popover内容</div>
+    </template>
+    <g-button>右边弹出</g-button>
+</g-popover>
 ```
 
 # Attributes
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
-|position|弹出位置|String|top/ bottom/ middle|top|
-|closeButton|关闭选项（可携带callback）|Object|   |——|
-|enableHTML|是否支持HTML|Boolean||false|
-|autoClose|是否自动关闭|Boolean/ Number|   |5|
+|position|弹出位置|String|top/ bottom/ left/ right|top|
+|trigger|触发方式|String|click/ hover|click|
