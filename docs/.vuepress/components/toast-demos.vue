@@ -1,8 +1,6 @@
 <template>
     <div>
         <g-button @click="showToast">上方弹出</g-button>
-        <g-button @click="showToast">中间弹出</g-button>
-        <g-button @click="showToast">下方弹出</g-button>
     </div>
 </template>
 
@@ -18,14 +16,9 @@
             "g-button": Button,
             "g-toast": Toast,
         },
-        data() {
-            return {
-
-            }
-        },
         methods: {
             showToast() {
-                this.$toast(`我是第${parseInt(Math.random() * 100)}个<p>message</p>`,
+                this.$toast('我是Toast',
                     {
                         position: 'top',
                         closeButton: {
